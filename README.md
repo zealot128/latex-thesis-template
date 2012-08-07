@@ -2,6 +2,7 @@
 
 for thesis, mostly German.
 
+[Example.pdf](https://raw.github.com/zealot128/latex-thesis-template/master/example.pdf)
 
 Basierend auf meiner eigenen Diplomarbeit, weiteren Abschlussarbeiten und unzähligen Skriptem, mein Standardtemplate für neue, Abgabewürdige Dokumente
 
@@ -52,6 +53,7 @@ end
 \caption{Ruby method definition with beautiful syntax hl}
 \end{listing}
 ```
+
 
 Andere Code-Environments koennen definiert werden, siehe parts/partials/custom\_commands.tex
 
