@@ -1,0 +1,55 @@
+% FullRef:   siehe \ref{sec:bla}   -> siehe 7 - "Kapitelname"
+
+%%%%%%%%%%%%%%%%%
+% Makros fuer den Einsatz von Dingens am Rand
+%%%%%%%%%%%%%%%%%
+\newcommand{\randbem}[1]{
+  \marginpar[\fontsize{9}{10}\selectfont \raggedleft{#1}]
+  {\fontsize{9}{10}\selectfont \raggedright{#1}}
+}
+
+\newcommand{\bordergraphic}[1]{
+  \marginline{\includegraphics[width=0.8\marginparwidth]{#1}}}
+
+\newcommand{\borderquote}[2]{
+\setlength{\epigraphwidth}{\marginparwidth}
+\marginpar{\fontsize{9}{10} \epigraph{#1}{#2}}
+\setlength{\epigraphwidth}{0.8\textwidth}
+}
+
+
+% Einheitliche Bildquelle als zusaetzliches Label
+\newcommand{\imgsource}[1]{\captionsetup{font={footnotesize,bf,it}} \caption*{#1}}
+
+% %%% Tiefe des Inhaltsverzeichnis  beschraenken
+% \setcounter{tocdepth}{2}	%kleineres TOC
+
+% Langer Pfeil fuer den Fließtext
+\newcommand{\arr}{$ \Longrightarrow$}
+
+
+% Standard-Listings fuer Ruby laden
+\lstloadlanguages{Ruby}
+\lstset{%
+  basicstyle=\ttfamily\footnotesize\color{black},
+  commentstyle = \ttfamily\color{gray},
+  keywordstyle=\ttfamily\color{blue},
+  stringstyle=\color{red},
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,
+  frame=single,
+  breaklines=true
+}
+% Umlaute in Listings ermoeglichen
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+\newcommand{\glossar}[1]{$^\uparrow$\gls{#1}}
+\newcommand{\glossarpl}[1]{$^\uparrow$\glspl{#1}}

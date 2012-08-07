@@ -1,0 +1,133 @@
+\newglossaryentry{test} {
+  name={Testfall},
+  description= { oder \index{Test} ist eine, meist automatisierte, Prüfung des Programmverhaltens bei definierten Eingabeparametern},
+  plural={Tests}
+}
+
+\newglossaryentry{testrunner} {
+  name={Test-Runner},
+  description= {oder Testtreiber) ist eine Software, um \glossarpl{test} aufzurufen und deren Ausführung zu überwachen und zu steuern}
+}
+\newglossaryentry{rake} {
+  name={Rake},
+  description= {ist ein Build-Programm, das im Gegensatz zu \texttt{make} mit Ruby programmiert wird. Es ist modular mit eigenen Tasks erweiterbar. Innerhalb von Rails dient es auch als weitere Schnittstelle zur Anwendung, um Wartungsaufgaben auszuführen (z.B. Datenbankbackup oder Cronjobs)}
+}
+\newglossaryentry{racktest} {
+  name={RackTest},
+  description= { ist eine Test-API für Rack-Anwendungen. Rack ist ein minimales Interface zur Kommunikation mit Webservern, Middlewares und Webframeworks, wie z.B. Rails. RackTest kommuniziert direkt mit dem Rack-Interface, verzichtet auf HTTP Traffic und ist damit sehr schnell}
+}
+
+\newglossaryentry{testsuite} {
+  name={Test-Suite},
+  description= {ist eine Gruppe von mehreren Testfällen für eine Komponente oder für das gesamte System}
+}
+
+\newglossaryentry{fehler} {
+  name={Software-Fehler},
+  description= {ist jede Abweichung der Implementierung von der Spezifikation \citep[IEEE/ANSI]{fritzsche_sqm_2005}. Diese Abweichungen können zu fehlerhaftem Verhalten der Anwendung führen},
+  text=Fehler,
+  first={Software-Fehler}
+}
+\newglossaryentry{quality} {
+  name={Code-Qualität},
+  description= {beinhaltet die Software-Qualitäten Lesbarkeit, Testbarkeit, Wartbarkeit, Erweiterbarkeit, geringe Komplexität},
+}
+
+\newglossaryentry{metrik} {
+  name={Code-Metrik},
+  plural={Code-Metriken},
+  description={Eine Softwaremetrik ist das Ergebnis einer statischen oder dynamischen Codeanalyse zur Generierung von Informationen über den Quelltext. Beispiele: Testabdeckung, Anzahl Codezeilen, Anzahl \glossarpl{smell} pro Codezeile}
+}
+\newglossaryentry{refaktorisieren} {
+  name = {Refaktorisieren},
+  description = {Ist eine Modifikation des Programmcodes ohne Modifikation des externen Verhaltens um nicht-funktionale Eigenschaften des Quellcodes zu verbessern, wie z.B. Lesbarkeit, Wiederverwendbarkeit und Wartbarkeit}
+}
+\newglossaryentry{Testabdeckung} {
+  name=Testabdeckung,
+  description={auch: \index{Test!Testabdeckung}Testausführungsabdeckung, Überdeckungsgrad, Testfallabdeckung. Eine dynamische Code-Metrik\index{Code-Metrik}, die angibt, welche Codezeilen durch keinen Test abgedeckt wurden. Es wird unterschieden in die Stufen C0, C1 und C2 mit steigender Komplexität der Messung. Details im Abschnitt \ref{sec:metrics}},
+  first = {Testabdeckung}
+}
+\newglossaryentry{TDD}{
+  name={Testgetriebene Entwicklung},
+  description={englisch Test Driven Development/Test Driven Design, Ausführlich dargelegt in Abschnitt \ref{sec:tdd}},
+  text = TDD,
+  first = {Testgetriebene Entwicklung}
+}
+\newglossaryentry{BDD}{
+  name={ Behavior Driven Development},
+  description={ (Verhaltensgetriebene Entwicklung). Umformulierung von TDD\index{TDD} zur Ausrichtung auf Businessprozesse. Das Vokabular zielt auf die Spezifikation von Erwartungen im Systemverhalten, anstatt Definition nachträglicher Tests}
+}
+\newglossaryentry{CRUD} {
+  name={CRUD},
+  description={Create, Read, Update, Delete sind die vier Basisoperationen, die auf persistente Speicherung ausgeführt werden können},
+  first={Create Read Update Delete (CRUD)}
+}
+\newglossaryentry{smell}{
+  name={Code Smell},
+  description={oder Bad Smell\index{Code-Smell}. Ist ein Anzeichen für eine suboptimale Quelltextstelle, die auch ein Hinweis auf ein größeres Designproblem sein kann. Oft auch ein Kandidat für eine Refaktorisierung. Informationen zu Smells und deren Refaktorisierung\index{Refaktorisierung} sind im Buch von M.Fowler zu finden \citep{fowler_refactoring_1999}},
+  plural={Code Smells}
+}
+\newglossaryentry{ORM}{
+  name={ORM},
+  description={Objektrelationales Mapping, ist eine Persistenztechnik, um Objekte transparent in einer Datenbank\index{Datenbank} zu speichern und umgekehrt, Tabellenzeilen in Objekte wieder zu rückübersetzen},
+  plural={ORMs},
+  first={Objekt-relationales Mapping (ORM)}
+}
+\newglossaryentry{MVC}{
+  name={MVC},
+  description={Model-View-Control, ist ein \glossar{patterns}, das insbesondere bei GUI- und Web-Anwendungen beliebt ist. Rails\index{Ruby-on-Rails} basiert auf dem MVC-Muster},
+  plural={MVCs},
+  first={Model-View-Controller (MVC)}
+}
+
+\newglossaryentry{rails}{
+  name={Ruby-on-Rails},
+  description={ist ein auf der Programmiersprache Ruby basierendes Web-Framework und ist Gegenstand des Kapitels \ref{sec:rails}},
+  text = Rails,
+  first = Ruby on Rails
+}
+
+\newglossaryentry{Test-Double} {
+  name={Test-Double},
+  plural={Test-Doubles},
+  description = {haben die Aufgabe, komplexe Objekte in einem isolierten Test \index{Test}zu simulieren, in dem statt komplexer Berechnungen oder externer Zugriffe konstante Werte geliefert werden. Vertreter dieser Test Doubles sind die Mock\index{Test-Double!Mock}s und Stub\index{Test-Double!Stub}s, siehe Abschnitt
+ \ref{sec:mocks}}
+}
+\newglossaryentry{patterns}{
+  name={Entwurfsmuster},
+  description={ oder Design Patterns sind bewährte Vorlagen, um häufig wiederkehrende Probleme zu lösen. Weitere Informationen im Buch Design Patterns: Elements of Reusable Object-Oriented Software von Gamma, Helm, Johnson, Vlissides (Gang of Four)}
+}
+\newglossaryentry{RSS}{
+  name={RSS},
+  description={  RDF Site Summary, ist ein standardisierter XML-Dialekt zur maschinenlesbaren Verteilung und Veröffentlichung von Inhalten. Es existiert in den Versionen 0.9 bis 2.0.1, die sich nur in Details, wie z.B. Einbindung von Rich-Media (Podcasts, ..) und Namespaces unterscheiden}
+}
+\newglossaryentry{Test-Umgebung} {
+  name={Test-Umgebung},
+  description={ist eine spezielle Konfiguration der Hard- und Software, um Tests unter kontrollierten und bekannten Bedingungen auszuführen. Dies beinhaltet neben dem zu testenden Objekten (Object under Test) auch sogenannte \glossarpl{Test-Double}\index{Test-Double} und den \glossar{testrunner}}
+}
+\newglossaryentry{gem} {
+  name={Gem},
+  plural={Gems},
+  description={als Gem\index{Gem}s (zu Deutsch: Edelsteine) werden in der Ruby-Gemeinschaft Bibliotheken Dritter bezeichnet, die in einem zentralen Repository lagern. Das Bekannteste dieser Repositorien ist rubygems.org. Nahezu alle Ruby-Bibliotheken lassen sich hier finden und innerhalb von Sekunden mittels des Kommandozeilenwerkzeuges gem installieren. Beispielsweise ließe sich \glossar{rails} mittels \texttt{gem install rails} installieren}
+}
+
+\newglossaryentry{DSL} {
+  name={DSL},
+  plural={DSLs},
+  description={Eine Domain-spezifische Sprache ist eine auf eine spezielle Problemdomäne ausgerichtete Programmier- oder Spezifikationssprache. Vertreter sind z.B. SQL, die Statistiksprache R oder die Hardwarebeschreibungssprache VHDL. Sie stehen damit den Allzweck-Programmiersprachen gegenüber},
+  first={Domain-Specific-Language (DSL)}
+}
+
+
+\newglossaryentry{CMS} {
+  name={CMS},
+  plural={CMSe},
+  description={Content Management System (Inhaltsverwaltungssystem) ist eine, meist Web-basierte Software, die es Nutzern ermöglicht einfach statische Inhalte anzulegen und zu bearbeiten},
+first = {Content Management System}
+}
+% \glsaddall % Enable all glossar entries, even if not used yet
+
+\renewcommand{\glossarypreamble}{Im Folgenden werden einige oft verwendete Begriffe näher erläutert. Innerhalb des Hauptteils dieser Arbeit sind diese Begriffe mit einem $^\uparrow$ gekennzeichnet.}
+% \renewcommand{\glossarymark}{Glossar}
+
+
