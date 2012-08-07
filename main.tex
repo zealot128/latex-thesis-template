@@ -1,171 +1,46 @@
-\documentclass[
-		a4paper,
-		12pt,
-		twoside,
-		openany,        % Chapter beginnen auf rechter Seite
-		parskip,
-    % tocbasic,
-		final,          % DEBUG modus
-		11pt,
-    % draft, # DEBUG MOUS
-		appendixprefix,
-    % headsepline,                       % Linie nach Kopfzeile.
-    % footsepline,                       % Linie vor Fusszeile.
-    % bibtotocnumbered,                  % Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
-		chapterprefix,  % Kapitel anschreiben als Kapitel
-]{scrreprt}
-\usepackage[twoside,width=14cm, height=24cm,right=3.25cm, left=2.5cm]{geometry}
-\setlength{\marginparwidth}{2.25cm}
-\clubpenalty = 10000
-\widowpenalty = 10000 \displaywidowpenalty = 10000
-
-\usepackage[ngerman]{babel}
-
-\usepackage[utf8]{inputenc}		%Damit kann man auch Umlaute direkt eintippen  \o/
-\usepackage{textcomp}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsbsy}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{graphicx}	%including images
-\usepackage{fancyhdr}	%for editiable headers and footers
-\usepackage{setspace} 	%for 1,5times row space
-\usepackage{color}
-\definecolor{darkblue}{rgb}{0,0,.5}
-\usepackage[colorlinks,
-  pdfpagelabels,pdfstartview=FitH,bookmarksopen=true,bookmarksnumbered=true,
-  linkcolor= black,
-  plainpages=false,
-  hypertexnames=false,
-  citecolor=black,linkcolor=black,menucolor=black,urlcolor=darkblue]
-  {hyperref}
-			%clickable TOC
-\usepackage{multirow}	%linebreak in Table
-\usepackage{enumerate}	% \begin{enumerate}[a.]     Custom Nummerierung
-\usepackage{float}	% Images mit Float
-\usepackage{colortbl}	%colorTables
-\usepackage{framed}   		%begin{framed}
-\usepackage{longtable} 		%begin{longtable}
-\usepackage{makeidx}
-\usepackage[square,sort&compress,comma,numbers]{natbib}  % natbib, aber Zitiert mit [..] anstatt (..)
-\usepackage{epigraph}		% Epigraph = stylische Zitatte
-\usepackage{listings}	% Quellcode Listings und List of Listings
-\usepackage{caption}	% Modifizierung und setzen von custom captions
-\usepackage[dvipsnames,table]{xcolor}
-\usepackage[nottoc]{tocbibind}	% TOC Plugin -> ??
-\usepackage{relsize}
-\usepackage[toc]{glossaries}
-%\usepackage{marginnote}
-%\usepackage{minted}  % TODO Pygments wrapper... ohje :)
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%% Metainfos
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newcommand{\ownTitle}{Diplomarbeit}
-\newcommand{\ownTitleZ}{Testgetriebene Entwicklung von Web-Serveranwendungen auf der Basis von Ruby on Rails}
+\newcommand{\ownTitleZ}{Untertitel der Arbeit}
 \newcommand{\ownAutor}{Stefan Wienert, HTW Dresden}
+\include{parts/partials/includes}
+\include{parts/partials/style}
+\include{parts/partials/custom_commands}
 
-\title{\ownTitle}
-\author{\ownAutor}
-\pdfinfo{
- /Title  (\ownTitle)
- /Author (\ownAutor)
- /Subject (\ownTitleZ)
- /Keywords()
-}
-\date{\today}
-\setlength{\epigraphwidth}{.8\textwidth}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% HEAD AND FOOTLINES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{headings}
-\definecolor{Gray}{rgb}{0.85,0.85,0.90}
-
-\makeindex 	%start Aufzeichnung eines Stichwortverzeichnisses
-\makeglossary  	%start Aufzeichnung eines Glossars
-
-%%%%%%%%%%%%%%%%%%%%%% STYLINGS & FONTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\footrulewidth}{0.5pt}
-%\let\cleardoublepage\clearpage
-\parskip 5pt       % sets spacing between paragraphs
-\parindent 0pt
-
-
-\usepackage{bookman}  % 118 pages, sehr sauber
-% \usepackage{newcent}  % 116 pages, nice aber etwas zu kraeftig
-% \usepackage{lmodern}  % 109 pages, standardmaessig
-% \usepackage{boisik}    % 113 pages, gewagt aber sehr detailiert, etwas ungerade
-% \usepackage{palatino}    % 111 pages, Arial'y sehr langweilig in den Ueberschriften
-% \usepackage{cmbright}    % 111 pages, Wie ein modernes Buch. Gut fuer ne Doku oder so
- \usepackage{charter}    % 109 pages, Wie ein modernes Buch. Gut fuer ne Doku oder so
-%\fontsize{12}{15}
-
-\usepackage{hyphenat}
-\usepackage[T1]{fontenc}
-
-
+% Custom hyphenation rules
 \hyphenation{
-Com-mu-ni-ty
-Soft-ware-Ent-wick-lung
-Soft-ware
-Aus-für-lich
-Um-for-mu-lie-rung
-Test-fall-ab-deck-ung
-Test-Unit
-Test/Unit
-Da-ten-bank-an-bin-dung
-Tes-ten
-Grob-ent-wurf
-Pro-gram-ming
-Active-Record
-Ini-ti-ali-sie-rung
-Sys-tem
-be-schreibt
-De-ckungs-gleich-heit
-Ba-sis-at-tri-bu-te
-Ar-gu-ment-Er-ror
+  Com-mu-ni-ty
+  Soft-ware-Ent-wick-lung
 }
 
-\usepackage{setspace}
-\setstretch{1,15} % Mein TOC ist zu lang!!
-\newcommand{\fullref}[1]{\ref{#1} -- \glqq\,\textit{\nameref{#1}}\grqq}
-\include{custom_commands}
 %\include{parts/partials/glossar}  % Glossar definitions
 
 \begin{document}
- \include{parts/partials/frontpage}
- \cleardoublepage
-
- \pagenumbering{Roman}
- \tableofcontents		%Inhaltsverzeichnis
- \newpage
- \setstretch{1,25}  % Entspricht \onehalfspacing
- \include{parts/intro/preambel}
-
-  % Table -- Zebrastreifen und 1.25 Row Abstand
-  \rowcolors{1}{lightgray!50!white}{white}
-  \colorlet{tableheadcolor}{gray!40}
-  \renewcommand\arraystretch{1.25}% (MyValue=1.0 is for standard spacing)
-
-
-  \thispagestyle{empty} \mbox{}
-  %\newpage
-  %\setcounter{page}{-1}
-  %\clearpage
+  \setstretch{1,25}  % is equal to \onehalfspacing
+  %\setstretch{1,15} % can be made smaller
+  \include{parts/partials/frontpage}
   \cleardoublepage
-  \pagenumbering{arabic}
- \input{parts/gliederung}
- \include{parts/99-appendix}
- \newpage
- \printglossary[toctitle=Glossar]
- \input{parts/partials/listen}
- \input{parts/partials/erklaerung.tex}
+
+  \pagenumbering{Roman} % Roman page numbers for intro
+  \tableofcontents
+  \newpage
+  %\setstretch{1,25}  % Entspricht \onehalfspacing
+
+  % Thx, preface etcpp
+  \include{parts/intro/preambel}
+
+  \fancytables
+
+  %\thispagestyle{empty} \mbox{}
+  %\setcounter{page}{-1}  % Counter can be reset
+  \cleardoublepage
+  \pagenumbering{arabic}  % normale page numbering 1 2 3
+  \input{parts/main_part}  % MAIN PART
 
 
+  \pagenumbering{Roman}
+  \include{parts/appendix}   % stuff that doesnt fit in main part
+  \newpage
+  % index, lof, lot, lot
+  \input{parts/partials/listen}
+  % Selbststaendigkeitserklaerung
+  \input{parts/partials/erklaerung.tex}
 \end{document}

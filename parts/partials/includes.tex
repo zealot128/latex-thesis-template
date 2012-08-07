@@ -1,0 +1,72 @@
+\documentclass[ a4paper,
+  12pt,
+  twoside,        % Links und Rechtsseitig vertauschter Abstand
+  openany,        % Chapter beginnen auf rechter Seite
+  parskip,
+  % tocbasic,
+  final,          % DEBUG modus
+  11pt,
+  % draft, # DEBUG MOUS
+  appendixprefix,
+  % headsepline,                       % Linie nach Kopfzeile.
+  % footsepline,                       % Linie vor Fusszeile.
+  % bibtotocnumbered,                  % Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
+  chapterprefix  % Kapitel anschreiben als Kapitel
+  ]{scrreprt}
+\usepackage[twoside,width=14cm, height=24cm,right=3.25cm, left=2.5cm]{geometry}
+
+% Hyphenate, names of toc etc.
+\usepackage[ngerman]{babel}
+
+\usepackage[utf8]{inputenc}		%Damit kann man auch Umlaute direkt eintippen  \o/
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}	%including images
+\usepackage{fancyhdr}	%for editiable headers and footers
+\usepackage{setspace} 	%for 1,5times row space
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.5}
+\usepackage[colorlinks,
+  pdfpagelabels,pdfstartview=FitH,bookmarksopen=true,bookmarksnumbered=true,
+  linkcolor= black,
+  plainpages=false,
+  hypertexnames=false,
+  citecolor=black,linkcolor=black,menucolor=black,urlcolor=darkblue]
+{hyperref}
+%clickable TOC
+\usepackage{multirow}	%linebreak in Table
+\usepackage{enumerate}	% \begin{enumerate}[a.]     Custom Nummerierung
+\usepackage{float}	% Images mit Float
+\usepackage{colortbl}	%colorTables
+\usepackage{framed}   		%begin{framed}
+\usepackage{longtable} 		%begin{longtable}
+\usepackage{makeidx}
+\usepackage[square,sort&compress,comma,numbers]{natbib}
+  % choose your cite style
+\usepackage{epigraph}		% \epigraph = nice quotes
+\usepackage{caption}	% Modifizierung und setzen von custom captions
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage[nottoc]{tocbibind}	% TOC Plugin -> ??
+\usepackage{relsize}
+\usepackage[toc]{glossaries}
+\usepackage{setspace} % Allow setting of \setstrech
+
+%\usepackage{marginnote}
+\usepackage{listings}	% default source code listings
+\usepackage{minted}
+\usepackage{hyphenat}
+\usepackage[T1]{fontenc}
+
+\title{\ownTitle}
+\author{\ownAutor}
+\pdfinfo{
+  /Title  (\ownTitle)
+    /Author (\ownAutor)
+    /Subject (\ownTitleZ)
+    /Keywords()
+}
+\date{\today}

@@ -1,11 +1,20 @@
-%\setstretch{1,0} % Mein TOC ist zu lang!!
+\printglossary[toctitle=Glossar]
+%\setstretch{1,0}
 \listoffigures
-%\setstretch{1,25} % Mein TOC ist zu lang!!
+%\setstretch{1,25}
 
-\addcontentsline{toc}{chapter}{Quellcode-Listings}
-\lstlistoflistings
 
-%  \cite{*} % Alles Zitieren DEBUG
+% plain lst listings ...
+%\addcontentsline{toc}{chapter}{Quellcode-Listings}
+%\lstlistoflistings
+
+
+% better listings
+\renewcommand\listoflistingscaption{Quellcode-Verzeichnis}
+\listoflistings
+
+
+%  \cite{*} % everything from .bib to bibliography
 \bibliographystyle{alphadin}     % Kurz
 %\bibliographystyle{natbib}     % Verbos
 

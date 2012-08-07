@@ -1,0 +1,60 @@
+% \fullref{sec:bla}  -> "8.2 - 'Name der Subsection"
+% zum Verweis mit Wiederholung des Verweistitels
+\newcommand{\fullref}[1]{\ref{#1} -- \glqq\,\textit{\nameref{#1}}\grqq}
+
+
+% graphik on the right or left border (dep. on twosided)
+\newcommand{\bordergraphic}[1]{\marginline{\includegraphics[width=0.8\marginparwidth]{#1}}}
+
+% text on the border
+\newcommand{\randbem}[1]{\marginpar[\fontsize{9}{10}\selectfont \raggedleft{#1}]
+  {\fontsize{9}{10}\selectfont \raggedright{#1}}
+}
+% quote on the border
+\newcommand{\borderquote}[2]{\setlength{\epigraphwidth}{\marginparwidth}
+\marginpar{\fontsize{9}{10} \epigraph{#1}{#2}}
+\setlength{\epigraphwidth}{0.8\textwidth}
+}
+
+
+% Einheitliche Bildquelle als zusaetzliches Label
+\newcommand{\imgsource}[1]{\captionsetup{font={footnotesize,bf,it}} \caption*{#1}}
+
+% convenient long arrow
+\newcommand{\arr}{$ \Longrightarrow$}
+
+
+% load ruby as a standard listing
+\lstloadlanguages{Ruby}
+\lstset{%
+  basicstyle=\ttfamily\footnotesize\color{black},
+  commentstyle = \ttfamily\color{gray},
+  keywordstyle=\ttfamily\color{blue},
+  stringstyle=\color{red},
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,
+  frame=single,
+  breaklines=true
+}
+% Allow umlauts in lstlistings
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+% fancy glossar reference with arrow in front of
+\newcommand{\glossar}[1]{$^\uparrow$\gls{#1}}
+\newcommand{\glossarpl}[1]{$^\uparrow$\glspl{#1}}
+
+  % make table beautiful:
+  %   zebra colors, more difference, header bg color
+  % cannot be earlier, because frontpage uses tables for positioning
+\newcommand{\fancytables}{\rowcolors{1}{lightgray!50!white}{white}
+\colorlet{tableheadcolor}{gray!40}
+\renewcommand\arraystretch{1.25}% (MyValue=1.0 is for standard spacing)
+}

@@ -26,3 +26,7 @@ main.ist
 *.out
 *.synctex.gz
 *.backup
+*.swp
+*.swo
+main.pyg
+pdf/*.pdf
